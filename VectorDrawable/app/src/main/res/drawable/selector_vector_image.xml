@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/android_logo_normal"    android:state_pressed="false"/>
+    <item android:drawable="@drawable/android_logo_selected"
+        android:state_pressed="true" />
+</selector>

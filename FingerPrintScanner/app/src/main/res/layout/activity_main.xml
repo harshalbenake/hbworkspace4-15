@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/switchOnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:text="Switch On USB" />
+
+    <Button
+        android:id="@+id/SecuGenOnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switchOnBtn"
+        android:layout_centerHorizontal="true"
+        android:text="Start SecuGen" />
+
+    <Button
+        android:id="@+id/switchOffBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SecuGenOnBtn"
+        android:layout_centerHorizontal="true"
+        android:text="Stop SecuGen" />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switchOffBtn"
+        android:layout_centerHorizontal="true" />
+
+    
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PhoneGap JSON Example</title>
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript">
+         $(document).ready(function() {
+             $.getJSON("http://phonegappro.esy.es/test/json.php",function(result){
+               $.each(result, function(i, field){
+                 $("#output").append("Title: "+ field.title + " duration: "+field.duration +" Price:"+field.price+"<br/>");
+              });
+              document.addEventListener("deviceready", onDeviceReady, false);
+
+             });
+          });
+
+
+
+          function displayMessage(msg)
+         {
+             navigator.notification.alert(msg);
+         }
+
+         function loadDirectories(fileSystem)
+         {
+             directoryEntry = fileSystem.root;
+
+             var directoryReader = directoryEntry.createReader();
+
+             directoryReader.readEntries(function(entries){
+                     var sOutput = "";
+                     for(var i=0; i < entries.length; i++)
+                     {
+                         if(!entries[i].isDirectory)
+                         {
+                             fileSystem.root.getFile(entries[i].name,null,gotFileEntry,fail);
+                         }
+                     }
+                     //displayMessage(sOutput);
+                 },fail);
+         }
+         function gotFileEntry(fileEntry)
+         {
+             fileEntry.file(function(file){
+                 var reader = new FileReader();
+                 reader.onloadend = function(evt){
+                    fileEntry.createWriter(gotFileWriter, fail);
+                // displayMessage(evt.target.result);
+             };
+         reader.readAsText(file);
+             },fail);
+         }
+
+
+             function gotFileWriter(writer) {
+                writer.onwriteend = function(evt) {
+                     console.log("contents of file now 'some sample text'");
+                    // writer.truncate(11);
+                     writer.onwriteend = function(evt) {
+                         console.log("contents of file now 'some sample'");
+                         <!--writer.seek(4);-->
+                         <!--writer.write(" different text");-->
+                         writer.onwriteend = function(evt){
+                             console.log("contents of file now 'some different text'");
+                         }
+                     };
+                 };
+                          var text = $('#output').text();
+
+                 writer.write(text);
+                 displayMessage(text);
+             }
+
+
+
+         function failFile(evt)
+         {
+             displayMessage(evt.target.error.code);
+         }
+         function fail(error)
+         {
+             displayMessage("Failed to list directory contents: " + error.code);
+         }
+         function onBodyLoad()
+         {
+         document.addEventListener("deviceready", onDeviceReady, false);
+         }
+         function onDeviceReady()
+         {
+             window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, loadDirectories, fail);
+         }
+
+      </script>
+</head>
+<body>
+<div id="output">
+</div>
+</body>
+</html>

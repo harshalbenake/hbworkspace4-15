@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CameraCapture</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="et_hint_number">Roll Number</string>
+    <string name="et_hint_confirmnumber">Confirm Roll Number</string>
+    <string name="btn_captureimage">Capture Image</string>
+    <string name="btn_next">Next</string>
+    <string name="msg_enter_number">Please enter roll number</string>
+    <string name="msg_enter_confirmnumber">Please enter confirm roll number</string>
+    <string name="msg_same_confirmnumber">Roll number and confirmed roll number should be same</string>
+    <string name="prompt_profile_browser_option">Select</string>
+    <string-array name="array_profile_browser_option">
+        <item>Camera</item>
+        <item>Gallery</item>
+    </string-array>
+</resources>

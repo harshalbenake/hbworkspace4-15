@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--SecuGen SDU03P 0x1162 0x1000-->
+    <usb-device vendor-id="4450" product-id="4096" />
+    <!--SecuGen SDU04P  0x1162 0x2000-->
+    <usb-device vendor-id="4450" product-id="8192" />
+    <!--SecuGen U20  0x1162 0x2200-->
+    <usb-device	vendor-id="4450" product-id="8704" />
+</resources>

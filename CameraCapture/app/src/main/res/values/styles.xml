@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColorPrimary">@color/default_pure_black</item>
+        <item name="android:textColorSecondary">@color/default_pure_grey</item>
+
+    </style>
+    <style name="custom_textinputlayout_hint" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">@dimen/size_20sp</item>
+    </style>
+    <style name="custom_textinputlayout_error" parent="TextAppearance.Design.Error">
+        <item name="android:textSize">@dimen/size_15sp</item>
+    </style>
+</resources>
