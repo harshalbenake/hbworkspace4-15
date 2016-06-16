@@ -29,8 +29,8 @@ public class MainActivity extends Activity {
         String[] s = new String[2];
 
     // Type the path of the files in here
-        s[0] = inputPathInternal + "/CAS.db";
-        s[1] = inputPathInternal + "/hb.txt"; // /sdcard/ZipDemo/textfile.txt
+        s[0] = inputPathInternal + "/hb1.txt";
+        s[1] = inputPathInternal + "/hb2.txt"; // /sdcard/ZipDemo/textfile.txt
 
     // first parameter is d files second parameter is zip file name
         ZipManager zipManager = new ZipManager();
