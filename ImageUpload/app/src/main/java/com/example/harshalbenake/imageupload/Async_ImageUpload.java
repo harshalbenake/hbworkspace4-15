@@ -135,7 +135,7 @@ public class Async_ImageUpload extends AsyncTask<String, String, String> {
 
 
     /**
-     * This webservice method is used to send post registration data to server.
+     * This webservice method is used to send data to server.
      *
      * @return
      */
@@ -171,8 +171,8 @@ public class Async_ImageUpload extends AsyncTask<String, String, String> {
 
             //first parameter - type
             dataOutputStream.writeBytes(twoHyphens + boundary + lineEnd);
-            dataOutputStream.writeBytes("Content-Disposition: form-data; name=\"type\"" + lineEnd + lineEnd
-                    + "Registration" + lineEnd);
+            dataOutputStream.writeBytes("Content-Disposition: form-data; name=\"parameter\"" + lineEnd + lineEnd
+                    + "parameter" + lineEnd);
 
             //uploaded_file parameter - UploadedImage
             dataOutputStream.writeBytes(twoHyphens + boundary + lineEnd);
