@@ -4,7 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-    <string name="webservice_url">http://172.24.11.34/casAPITesting/API/test</string>
+    <string name="webservice_url"></string>
 
 
     <!--Common-->
